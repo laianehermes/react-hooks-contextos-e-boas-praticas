@@ -29,15 +29,25 @@ function FormularioCadastro({ aoEnviar, validarCPF }) {
     setEtapaAtual(etapaAtual + 1);
   }
 
-  return <>
-    <Stepper activeStep={etapaAtual}>
-      <Step><StepLabel>Login</StepLabel></Step>
-      <Step><StepLabel>Pessoal</StepLabel></Step>
-      <Step><StepLabel>Entrega</StepLabel></Step>
-      <Step><StepLabel>Finalização</StepLabel></Step>
-    </Stepper>
-  {formulario[etapaAtual]}
-  </>;
+  return (
+    <>
+      <Stepper activeStep={etapaAtual}>
+        <Step>
+          <StepLabel>Login</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Pessoal</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Entrega</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Finalização</StepLabel>
+        </Step>
+      </Stepper>
+      {formulario[etapaAtual]}
+    </>
+  );
 }
 
 export default FormularioCadastro;
